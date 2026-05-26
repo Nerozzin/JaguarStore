@@ -950,330 +950,39 @@ font-size: 14px;
 /* RESPONSIVIDADE MOBILE */
 /* ========================= */
 
-@media (max-width: 900px){
-
-/* MENU */
+@media(max-width: 900px){
 
 .menu{
-flex-direction: column;
+padding: 15px 20px;
+height: 80px;
 
-padding: 20px;
-
-gap: 20px;
-}
-
-/* LINKS */
-
-.Links{
-flex-wrap: wrap;
-
-justify-content: center;
-
-gap: 15px;
-}
-
-.Links a{
-font-size: 13px;
-
-padding: 8px 14px;
-}
-
-/* PESQUISA */
-
-.pesquisar{
-width: 100%;
-max-width: 350px;
-}
-
-/* ICONES */
-
-.header-icons{
-margin-right: 0;
-}
-
-/* BANNER */
-
-.textimg{
-width: 90%;
-}
-
-.textimg h1{
-font-size: 42px;
-
-line-height: 1.1;
-}
-
-.textimg p{
-font-size: 16px;
-}
-
-/* INTRO */
-
-.intro-content h1{
-font-size: 36px;
-
-line-height: 1.2;
-}
-
-.intro-content p{
-font-size: 15px;
-
-padding: 0 15px;
-}
-
-.intro-buttons{
-flex-direction: column;
+display: flex;
 align-items: center;
-}
+justify-content: space-between;
 
-.enter-btn,
-.exit-btn{
-width: 220px;
-}
+background:
+rgba(0,0,0,0.55);
 
-/* CARDS */
-
-.cards-container{
-flex-direction: column;
-align-items: center;
-}
-
-.card{
-width: 100%;
-max-width: 340px;
-}
-
-/* PRODUTO */
-
-.product-page{
-padding-top: 120px;
-
-gap: 50px;
-}
-
-/* IMAGEM */
-
-.main-product-image{
-height: 450px;
-}
-
-/* MINIATURAS */
-
-.product-thumbs{
-justify-content: center;
-flex-wrap: wrap;
-}
-
-.product-thumbs img{
-width: 90px;
-height: 90px;
-}
-
-/* INFO PRODUTO */
-
-.product-info{
-padding-top: 0;
-}
-
-.product-info h1{
-font-size: 38px;
-}
-
-.product-price{
-font-size: 32px;
-}
-
-/* TAMANHOS */
-
-.size-buttons{
-flex-wrap: wrap;
-}
-
-/* BOTÕES */
-
-.product-buttons{
-flex-direction: column;
-align-items: stretch;
-}
-
-.buy-btn{
-width: 100%;
-}
-
-.fav-btn{
-width: 100%;
-border-radius: 20px;
-}
-
-/* FOOTER */
-
-.footer-container{
-flex-direction: column;
-
-gap: 45px;
-}
-
-.footer-brand,
-.footer-links,
-.footer-contact,
-.footer-social{
-width: 100%;
-}
-
-/* REDES */
-
-.social-icons{
-justify-content: flex-start;
-}
-
-}
-
-/* ========================= */
-/* CELULARES PEQUENOS */
-/* ========================= */
-
-@media (max-width: 600px){
-
-/* MENU */
-
-.menu{
-padding: 15px;
+backdrop-filter: blur(15px);
 }
 
 /* LOGO */
 
 .logo{
-width: 65px;
-}
-
-/* LINKS */
-
-.Links{
-gap: 10px;
-}
-
-.Links a{
-font-size: 12px;
-
-padding: 7px 10px;
-}
-
-/* PESQUISA */
-
-.pesquisar{
-height: 42px;
-}
-
-/* BANNER */
-
-.textimg h1{
-font-size: 30px;
-
-letter-spacing: 2px;
-}
-
-.textimg p{
-font-size: 14px;
-}
-
-/* INTRO */
-
-.intro-logo{
-width: 120px;
-}
-
-.intro-content h1{
-font-size: 28px;
-}
-
-/* ONDA */
-
-.wave-divider svg{
-height: 100px;
-}
-
-/* CARDS */
-
-.card{
-max-width: 100%;
-}
-
-.card-image{
-height: 300px;
-}
-
-/* TITULOS */
-
-.section-title h2{
-font-size: 32px;
-}
-
-/* PRODUTO */
-
-.main-product-image{
-height: 350px;
-
-border-radius: 25px;
-}
-
-.product-info h1{
-font-size: 30px;
-}
-
-.product-price{
-font-size: 28px;
-}
-
-.product-description-box{
-padding: 22px;
-}
-
-/* TAMANHOS */
-
-.size-buttons button{
 width: 55px;
-height: 55px;
-
-font-size: 16px;
+z-index: 9999;
 }
 
-/* BOTÕES */
-
-.buy-btn{
-height: 58px;
-
-font-size: 15px;
-}
-
-/* FOOTER */
-
-.footer{
-padding-top: 60px;
-}
-
-.footer-brand h2{
-font-size: 26px;
-}
-
-.footer h3{
-font-size: 20px;
-}
-
-.footer-bottom p{
-font-size: 12px;
-}
-
-}
-/* ========================= */
-/* MENU MOBILE */
-/* ========================= */
+/* MENU HAMBURGUER */
 
 .menu-toggle{
-display: none;
+display: flex;
 
 flex-direction: column;
 
-gap: 6px;
+gap: 5px;
+
+z-index: 9999;
 
 cursor: pointer;
 }
@@ -1285,226 +994,170 @@ height: 3px;
 background: white;
 
 border-radius: 10px;
-
-transition: 0.3s;
 }
 
-/* MOBILE */
-
-@media(max-width: 900px){
-
-.menu{
-flex-direction: row;
-flex-wrap: wrap;
-}
-
-/* HAMBURGUER */
-
-.menu-toggle{
-display: flex;
-}
-
-/* MENU */
+/* LINKS */
 
 .Links{
-position: absolute;
-
-top: 100%;
-left: 0;
-
-width: 100%;
-
-background: rgba(0,0,0,0.92);
-
-backdrop-filter: blur(12px);
-
-flex-direction: column;
-
-align-items: center;
-
-padding: 30px 0;
-
-gap: 25px;
-
-max-height: 0;
-
-overflow: hidden;
-
-transition: 0.4s ease;
-}
-
-/* ABERTO */
-
-.Links.active{
-max-height: 500px;
-}
-
-}
-/* ========================= */
-/* CARRINHO */
-/* ========================= */
-
-.cart-sidebar{
 position: fixed;
 
 top: 0;
-right: -450px;
+right: -100%;
 
-width: 420px;
-max-width: 100%;
-
+width: 75%;
 height: 100vh;
 
-background: rgba(10,10,10,0.96);
+background:
+rgba(5,5,5,0.98);
 
 backdrop-filter: blur(20px);
-
-z-index: 999999;
 
 display: flex;
 flex-direction: column;
 
+align-items: flex-start;
+justify-content: center;
+
+padding-left: 40px;
+
+gap: 35px;
+
 transition: 0.5s ease;
 
-border-left:
-1px solid rgba(255,255,255,0.08);
+z-index: 9998;
 }
 
-/* ABRIR */
-
-.cart-sidebar.active{
+.Links.active{
 right: 0;
 }
 
-/* HEADER */
-
-.cart-header{
-display: flex;
-justify-content: space-between;
-align-items: center;
-
-padding: 25px;
-
-border-bottom:
-1px solid rgba(255,255,255,0.08);
+.Links a{
+font-size: 24px;
 }
 
-.cart-header h2{
+/* PESQUISA */
+
+.pesquisar{
+position: absolute;
+
+left: 50%;
+bottom: -70px;
+
+transform: translateX(-50%);
+
+width: 90%;
+height: 50px;
+}
+
+.pesquisar input{
+background:
+rgba(255,255,255,0.08);
+
 color: white;
+
+backdrop-filter: blur(10px);
+
+font-size: 16px;
 }
 
-.cart-header button{
-background: none;
-border: none;
-
-color: white;
-
-font-size: 28px;
-
-cursor: pointer;
+.pesquisar input::placeholder{
+color:
+rgba(255,255,255,0.6);
 }
 
-/* ITENS */
+/* ICONES */
 
-.cart-items{
-flex: 1;
+.header-icons{
+position: absolute;
 
-padding: 25px;
+right: 80px;
 
-overflow-y: auto;
-}
-
-.empty-cart{
-color: rgba(255,255,255,0.5);
-}
-
-/* ITEM */
-
-.cart-item{
 display: flex;
-
-gap: 15px;
-
-margin-bottom: 20px;
-
-background: rgba(255,255,255,0.04);
-
-padding: 15px;
-
-border-radius: 20px;
+gap: 14px;
 }
 
-.cart-item img{
-width: 90px;
-height: 90px;
+.icon-img{
+width: 20px;
+height: 20px;
+}
 
+/* BANNER */
+
+.main-banner{
+height: 85vh;
+}
+
+.main-banner img{
+height: 85vh;
 object-fit: cover;
-
-border-radius: 15px;
 }
 
-.cart-item-info h4{
-color: white;
+/* TEXTO BANNER */
 
-margin-bottom: 10px;
+.textimg{
+top: 48%;
+width: 90%;
 }
 
-.cart-item-info p{
-color: rgb(236,240,2);
+.textimg h1{
+font-size: 42px;
+
+line-height: 1;
+
+letter-spacing: 2px;
+}
+
+.textimg p{
+font-size: 16px;
+
+margin-top: 15px;
+
+letter-spacing: 3px;
+}
+
+/* ONDA */
+
+.wave-divider{
+margin-top: -80px;
+}
+
+.wave-divider svg{
+height: 120px;
+}
+
+/* CARDS */
+
+.cards-container{
+display: grid;
+
+grid-template-columns: 1fr;
+
+gap: 25px;
+}
+
+.card{
+width: 100%;
+max-width: 340px;
+
+margin: auto;
+}
+
+.card-image{
+height: 340px;
 }
 
 /* FOOTER */
 
-.cart-footer{
-padding: 25px;
+.footer-container{
+flex-direction: column;
 
-border-top:
-1px solid rgba(255,255,255,0.08);
+gap: 40px;
 }
 
-.cart-footer h3{
-color: white;
+/* CARRINHO */
 
-margin-bottom: 20px;
-}
-
-.checkout-btn{
+.cart-sidebar{
 width: 100%;
-height: 55px;
-
-border: none;
-border-radius: 40px;
-
-background:
-linear-gradient(
-90deg,
-rgb(8,218,8),
-rgb(236,240,2)
-);
-
-font-weight: bold;
-
-cursor: pointer;
 }
 
-/* FAVORITADO */
-
-.fav-btn.favorited{
-background: rgba(255,0,80,0.18);
-
-box-shadow:
-0 0 20px rgba(255,0,80,0.3);
 }
-
-.fav-btn.favorited img{
-filter:
-brightness(0)
-saturate(100%)
-invert(19%)
-sepia(96%)
-saturate(7485%)
-hue-rotate(340deg)
-brightness(100%)
-contrast(104%);
-}
-
