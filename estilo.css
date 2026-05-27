@@ -1,0 +1,1307 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", Arial, sans-serif;
+  }
+  
+  body{
+  background-color: #0c0d26;
+  overflow-x: hidden;
+  }
+  
+  /* MENU */
+  
+  .menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  padding: 18px 40px;
+  
+  width: 100%;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  z-index: 1000;
+  
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(12px);
+  
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  
+  transition: 0.3s;
+  }
+  
+  /* LOGO */
+  
+  .logo{
+  width: 80px;
+  
+  filter: brightness(0) saturate(100%) invert(58%) sepia(90%)
+  saturate(1400%) hue-rotate(5deg);
+  
+  transition: 0.3s;
+  }
+  
+  .logo:hover{
+  transform: scale(1.05);
+  }
+  
+  /* LINKS */
+  
+  .Links{
+  display: flex;
+  gap: 35px;
+  }
+  
+  .Links a{
+  color: white;
+  text-decoration: none;
+  
+  font-size: 15px;
+  font-weight: 600;
+  
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+  padding: 10px 18px;
+  
+  border-radius: 30px;
+  
+  transition: 0.3s ease;
+  }
+  
+  .Links a:hover{
+  background: rgba(255,255,255,0.08);
+  
+  color: rgb(236, 240, 2);
+  
+  box-shadow: 0 0 15px rgba(236,240,2,0.25);
+  
+  transform: translateY(-2px);
+  }
+  
+  /* PESQUISA */
+  
+  .pesquisar{
+  display: flex;
+  align-items: center;
+  
+  position: relative;
+  
+  width: 320px;
+  height: 45px;
+  }
+  
+  .pesquisar input{
+  width: 100%;
+  height: 100%;
+  
+  padding: 0 50px 0 20px;
+  
+  border-radius: 40px;
+  
+  border: 1px solid rgba(255,255,255,0.1);
+  
+  background: rgba(255,255,255,0.08);
+  
+  backdrop-filter: blur(10px);
+  
+  outline: none;
+  
+  color: white;
+  
+  font-size: 14px;
+  
+  transition: 0.3s;
+  }
+  
+  .pesquisar input::placeholder{
+  color: rgba(255,255,255,0.7);
+  }
+  
+  .pesquisar input:focus{
+  border: 1px solid rgba(236,240,2,0.5);
+  
+  background: rgba(255,255,255,0.12);
+  
+  box-shadow: 0 0 15px rgba(236,240,2,0.2);
+  }
+  
+  .pesquisar button{
+  position: absolute;
+  
+  right: 15px;
+  
+  background: none;
+  border: none;
+  
+  cursor: pointer;
+  }
+  
+  .pesquisar button img{
+  width: 18px;
+  height: 18px;
+  
+  filter: brightness(0) invert(1);
+  
+  opacity: 0.8;
+  }
+  
+  /* ICONES */
+  
+  .header-icons{
+  display: flex;
+  align-items: center;
+  
+  gap: 14px;
+  
+  margin-right: 30px;
+  }
+  
+  .header-icons a{
+  width: 42px;
+  height: 42px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border-radius: 50%;
+  
+  background: rgba(255,255,255,0.08);
+  
+  transition: 0.3s;
+  }
+  
+  .header-icons a:hover{
+  background: rgba(236,240,2,0.15);
+  
+  transform: translateY(-3px);
+  
+  box-shadow: 0 0 15px rgba(236,240,2,0.3);
+  }
+  
+  .icon-img{
+  width: 20px;
+  height: 20px;
+  
+  object-fit: contain;
+  
+  filter: brightness(0) invert(1);
+  
+  transition: 0.3s;
+  }
+  
+  /* BANNER */
+  
+  .main-banner{
+  width: 100%;
+  height: 100vh;
+  
+  overflow: hidden;
+  
+  position: relative;
+  }
+  
+  .slides{
+  position: relative;
+  
+  width: 100%;
+  height: 100%;
+  }
+  
+  .slides img{
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+  
+  object-fit: cover;
+  
+  opacity: 0;
+  
+  animation: fadeBanner 15s infinite;
+  }
+  
+  .slides img:nth-child(1){
+  animation-delay: 0s;
+  }
+  
+  .slides img:nth-child(2){
+  animation-delay: 5s;
+  }
+  
+  .slides img:nth-child(3){
+  animation-delay: 10s;
+  }
+  
+  @keyframes fadeBanner{
+  
+  0%{
+  opacity: 0;
+  }
+  
+  5%{
+  opacity: 1;
+  }
+  
+  30%{
+  opacity: 1;
+  }
+  
+  35%{
+  opacity: 0;
+  }
+  
+  100%{
+  opacity: 0;
+  }
+  
+  }
+  
+  /* TEXTO DO BANNER */
+  
+  .textimg{
+  position: absolute;
+  
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  
+  text-align: center;
+  
+  color: white;
+  
+  z-index: 10;
+  }
+  
+  .textimg h1{
+  font-size: 70px;
+  
+  letter-spacing: 5px;
+  
+  font-family: "Climate Crisis", sans-serif;
+  
+  font-variation-settings:"YEAR" 1979;
+  
+  color: rgb(8, 218, 8);
+  
+  text-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+  
+  .textimg h1 span{
+  color: rgb(236, 240, 2);
+  
+  font-family: "Climate Crisis", sans-serif;
+  font-variation-settings:"YEAR" 1979;
+  }
+  
+  .textimg p{
+  font-size: 24px;
+  
+  margin-top: 10px;
+  
+  letter-spacing: 2px;
+  
+  text-transform: uppercase;
+  
+  color: rgba(255,255,255,0.9);
+  }
+  
+  /* ONDA */
+  
+  .wave-divider{
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  left: 0;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 15;
+  }
+  
+  .wave-divider svg{
+  display: block;
+  
+  width: 100%;
+  height: 170px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* CONTEUDO ABAIXO */
+  
+  .container{
+  padding: 80px 8%;
+  min-height: 500px;
+  }
+
+
+
+
+  /*PRODUTOS*/
+
+.products{
+  padding: 100px 8%;
+  position: relative !important;
+  z-index: 30;
+}
+
+
+.section-title{
+text-align: center;
+margin-bottom: 60px;
+}
+
+.section-title h2{
+font-size: 42px;
+color: rgb(255, 255, 255);
+margin-bottom: 10px;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+.section-title p{
+  color: green;
+  font-size: 16px;
+}
+
+.cards-container{
+  display: flex !important;
+  justify-content: center !important;
+  gap: 35px;
+flex-wrap: wrap;
+}
+
+
+/*CARDS*/
+
+.card{
+width: 320px;
+background: rgba(255, 255, 255, 0,5);
+border: 1px solid rgba(255, 255, 255,0.08);
+border-radius: 25px;
+overflow: hidden;
+backdrop-filter: blur(10px);
+transition: 0.4s ease;
+position: relative !important;
+text-decoration: none;
+color: white;
+}
+
+.card h3{
+text-decoration: none;
+color: white;
+}
+
+.card:visited{
+color: white;
+}
+
+
+
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow: rgba(0, 190, 9, 0.322) 0px 50px 80px -20px, rgba(0, 190, 9, 0.322) 0px 30px 60px -30px;
+}
+
+/*IMAGEM*/
+
+.card-image{
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+}
+
+.card-image img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: 0.5s;
+}
+
+.card:hover .card-image img{
+  transform: scale(1.05);
+}
+
+/*INFO*/
+
+.card-info{
+  padding: 25px;
+}
+
+.card-info h3{
+  color: white;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.price{
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(236, 240, 2);
+  margin-bottom: 20px;
+}
+
+/*BOTAO*/
+
+.card-info button{
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(90deg, (rgb(8, 218, 8)) rgb(236, 240, 2));
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-info button:hover{
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(236, 240, 2, 0.35);
+}
+
+/* PAGINA PRODUTO */
+
+.product-page{
+width: 100%;
+
+min-height: 100vh;
+
+padding: 140px 7% 80px;
+
+display: flex;
+justify-content: center;
+align-items: flex-start;
+
+gap: 90px;
+
+background:
+linear-gradient(
+180deg,
+#080808,
+#0c0d26
+);
+
+flex-wrap: wrap;
+}
+
+/* GALERIA */
+
+.product-gallery{
+flex: 1;
+min-width: 350px;
+max-width: 650px;
+}
+
+/* IMAGEM PRINCIPAL */
+
+.main-product-image{
+width: 100%;
+
+height: 700px;
+
+background: rgba(255,255,255,0.04);
+
+border-radius: 35px;
+
+overflow: hidden;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+backdrop-filter: blur(10px);
+
+border: 1px solid rgba(255,255,255,0.08);
+}
+
+.main-product-image img{
+width: 100%;
+height: 100%;
+
+object-fit: cover;
+
+transition: 0.5s;
+}
+
+/* MINIATURAS */
+
+.product-thumbs{
+display: flex;
+
+gap: 18px;
+
+margin-top: 25px;
+}
+
+.product-thumbs img{
+width: 110px;
+height: 110px;
+
+object-fit: cover;
+
+border-radius: 20px;
+
+cursor: pointer;
+
+border: 2px solid transparent;
+
+transition: 0.3s;
+}
+
+.product-thumbs img:hover{
+border-color: rgb(236,240,2);
+
+transform: translateY(-5px);
+}
+
+/* DESCRIÇÃO */
+
+.product-description-box{
+margin-top: 40px;
+
+padding: 30px;
+
+border-radius: 30px;
+
+background: rgba(255,255,255,0.04);
+
+border: 1px solid rgba(255,255,255,0.08);
+
+backdrop-filter: blur(10px);
+}
+
+.product-description-box h3{
+font-size: 24px;
+
+color: white;
+
+margin-bottom: 20px;
+}
+
+.product-description-box p{
+color: rgba(255,255,255,0.75);
+
+font-size: 16px;
+
+line-height: 1.9;
+}
+
+/* DIREITA */
+
+.product-info{
+flex: 1;
+
+min-width: 320px;
+max-width: 500px;
+
+padding-top: 40px;
+
+color: white;
+}
+
+/* TITULO */
+
+.product-info h1{
+font-size: 56px;
+
+line-height: 1.1;
+
+margin-bottom: 30px;
+
+text-transform: uppercase;
+}
+
+/* PREÇO */
+
+.product-price{
+font-size: 42px;
+
+font-weight: bold;
+
+color: rgb(236,240,2);
+
+margin-bottom: 45px;
+}
+
+/* TAMANHOS */
+
+.sizes h3{
+font-size: 20px;
+
+margin-bottom: 20px;
+}
+
+.size-buttons{
+display: flex;
+
+gap: 15px;
+
+margin-bottom: 50px;
+}
+
+.size-buttons button{
+width: 65px;
+height: 65px;
+
+border-radius: 18px;
+
+border: 1px solid rgba(255,255,255,0.1);
+
+background: rgba(255,255,255,0.04);
+
+color: white;
+
+font-size: 18px;
+font-weight: bold;
+
+cursor: pointer;
+
+transition: 0.3s;
+}
+
+.size-buttons button:hover{
+background: rgb(236,240,2);
+
+color: black;
+
+transform: translateY(-4px);
+}
+
+/* BOTÕES */
+
+.product-buttons{
+display: flex;
+
+align-items: center;
+
+gap: 20px;
+}
+
+/* COMPRAR */
+
+.buy-btn{
+flex: 1;
+
+height: 65px;
+
+border: none;
+border-radius: 50px;
+
+background:
+linear-gradient(
+90deg,
+rgb(8,218,8),
+rgb(236,240,2)
+);
+
+color: black;
+
+font-size: 17px;
+font-weight: bold;
+
+cursor: pointer;
+
+transition: 0.3s;
+}
+
+.buy-btn:hover{
+transform: scale(1.03);
+
+box-shadow:
+0 0 30px rgba(236,240,2,0.35);
+}
+
+/* FAVORITAR */
+
+.fav-btn{
+width: 44px;
+height: 44px;
+
+border-radius: 50%;
+
+border: 1px solid rgba(255,255,255,0.1);
+
+background: rgba(255,255,255,0.05);
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+cursor: pointer;
+
+transition: 0.3s;
+}
+
+.fav-btn img{
+width: 16px;
+height: 16px;
+
+filter: brightness(0) invert(1);
+
+transition: 0.3s;
+}
+
+.fav-btn:hover{
+background: rgba(255,0,80,0.15);
+
+transform: scale(1.08);
+
+box-shadow:
+0 0 20px rgba(255,0,80,0.25);
+}
+
+.fav-btn:hover img{
+filter:
+brightness(0)
+saturate(100%)
+invert(19%)
+sepia(96%)
+saturate(7485%)
+hue-rotate(340deg)
+brightness(100%)
+contrast(104%);
+}
+
+/* FOOTER */
+
+.footer{
+margin-top: 120px;
+
+background:
+linear-gradient(
+180deg,
+#090909,
+#050505
+);
+
+padding-top: 80px;
+
+border-top:
+1px solid rgba(255,255,255,0.08);
+}
+
+/* CONTAINER */
+
+.footer-container{
+width: 100%;
+
+display: flex;
+justify-content: space-between;
+
+gap: 50px;
+
+padding: 0 8% 60px;
+
+flex-wrap: wrap;
+}
+
+/* COLUNAS */
+
+.footer-brand,
+.footer-links,
+.footer-contact,
+.footer-social{
+flex: 1;
+min-width: 220px;
+}
+
+/* LOGO */
+
+.footer-brand img{
+width: 90px;
+
+margin-bottom: 20px;
+
+filter:
+brightness(0)
+saturate(100%)
+invert(58%)
+sepia(90%)
+saturate(1400%)
+hue-rotate(5deg);
+}
+
+.footer-brand h2{
+font-size: 32px;
+
+color: white;
+
+margin-bottom: 20px;
+}
+
+.footer-brand p{
+color: rgba(255,255,255,0.7);
+
+line-height: 1.8;
+}
+
+/* TITULOS */
+
+.footer h3{
+font-size: 22px;
+
+color: white;
+
+margin-bottom: 25px;
+}
+
+/* LINKS */
+
+.footer-links{
+display: flex;
+flex-direction: column;
+}
+
+.footer-links a{
+color: rgba(255,255,255,0.7);
+
+text-decoration: none;
+
+margin-bottom: 15px;
+
+transition: 0.3s;
+}
+
+.footer-links a:hover{
+color: rgb(236,240,2);
+
+transform: translateX(5px);
+}
+
+/* CONTATO */
+
+.footer-contact p{
+color: rgba(255,255,255,0.7);
+
+margin-bottom: 18px;
+
+line-height: 1.6;
+}
+
+/* REDES */
+
+.social-icons{
+display: flex;
+gap: 18px;
+}
+
+.social-icons a{
+width: 55px;
+height: 55px;
+
+border-radius: 50%;
+
+background: rgba(255,255,255,0.05);
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+transition: 0.3s;
+}
+
+.social-icons a:hover{
+background: rgba(236,240,2,0.12);
+
+transform: translateY(-5px);
+
+box-shadow:
+0 0 20px rgba(236,240,2,0.25);
+}
+
+.social-icons img{
+width: 24px;
+height: 24px;
+
+object-fit: contain;
+
+filter: brightness(0) invert(1);
+}
+
+/* BOTTOM */
+
+.footer-bottom{
+border-top:
+1px solid rgba(255,255,255,0.08);
+
+padding: 25px;
+
+text-align: center;
+}
+
+.footer-bottom p{
+color: rgba(255,255,255,0.5);
+
+font-size: 14px;
+}
+/* ========================================================== */
+/* CONFIGURAÇÕES DE RESPONSIVIDADE (MOBILE)         */
+/* ========================================================== */
+
+/* Botão Hamburguer (escondido no computador) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background-color: #f2b705; /* Cor amarela combinando com seu tema */
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Botão de fechar (escondido no computador) */
+.close-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Regras aplicadas APENAS em telas menores que 768px (Celulares) */
+@media (max-width: 768px) {
+  
+  /* Ajuste da barra de menu superior */
+  .menu {
+    padding: 15px 20px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background: rgba(12, 13, 38, 0.95) !important; /* Fundo sólido para não misturar com o texto */
+  }
+
+  /* Esconde a logo grande e a barra de pesquisa no mobile para dar espaço */
+  .logo, .pesquisar {
+    display: none !important;
+  }
+
+  /* Mostra o botão do menu hamburguer */
+  .menu-toggle {
+    display: flex !important;
+    z-index: 1001;
+  }
+
+  /* O MENU LATERAL (Escondido para a esquerda por padrão) */
+  .Links {
+    position: fixed !important;
+    top: 0;
+    left: -100% !important; /* Joga para fora da tela */
+    width: 280px;
+    height: 100vh;
+    background: #0c0d26 !important;
+    border-right: 2px solid #f2b705;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 100px 30px 30px 30px !important;
+    gap: 25px !important;
+    transition: left 0.3s ease-in-out !important;
+    z-index: 9999 !important;
+  }
+
+  /* Classe que o JavaScript ativa para fazer o menu aparecer */
+  .Links.active {
+    left: 0 !important;
+  }
+
+  /* Ajuste dos links dentro do menu lateral */
+  .Links a {
+    width: 100% !important;
+    text-align: left !important;
+    font-size: 20px !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: block !important;
+  }
+
+  /* Mostra o 'X' de fechar dentro do menu lateral */
+  .close-menu {
+    display: block !important;
+  }
+
+  /* Ajuste dos ícones da direita (Fav, Carrinho, User) */
+  .header-icons {
+    display: flex !important;
+    gap: 15px !important;
+    margin: 0 !important;
+  }
+
+  .header-icons a, .header-icons .fav-btn {
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 50% !important;
+  }
+
+  /* Ajuste do banner principal da Home */
+  .main-banner {
+    height: 50vh !important;
+    margin-top: 70px !important;
+  }
+
+  .textimg h1 {
+    font-size: 32px !important;
+  }
+
+  /* Ajuste dos Cards de produtos na Home */
+  .cards-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 20px !important;
+  }
+
+  .card {
+    width: 100% !important;
+    max-width: 345px !important;
+  }
+
+  /* Ajuste das Páginas de Produto (Camiseta 1, 2 e 3) */
+  .product-page {
+    margin-top: 90px !important;
+    flex-direction: column !important;
+    padding: 15px !important;
+    gap: 30px !important;
+  }
+
+  .product-gallery, .product-info {
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  .main-product-image {
+    height: 350px !important;
+  }
+
+  /* Carrinho lateral ocupando a tela toda no celular */
+  .cart-sidebar {
+    width: 100% !important;
+    right: -100% !important;
+  }
+
+  .cart-sidebar.active {
+    right: 0 !important;
+  }
+}
+/* ========================================================== */
+/* CORREÇÃO DO CARRINHO LATERAL (COMPUTADOR E MOBILE)         */
+/* ========================================================== */
+
+/* Estado padrão do Carrinho (Escondido para a direita) */
+.cart-sidebar {
+  position: fixed !important;
+  top: 0;
+  right: -100% !important; /* Joga o carrinho totalmente para fora da tela */
+  width: 350px;
+  height: 100vh;
+  background-color: #0c0d26; /* Cor do fundo do seu site */
+  border-left: 2px solid #f2b705; /* Borda amarela */
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease-in-out !important; /* Transição suave */
+  z-index: 10000 !important; /* Fica acima de tudo, inclusive do menu */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Classe ativa que o JavaScript coloca para abrir o carrinho */
+.cart-sidebar.active {
+  right: 0 !important; /* Traz o carrinho para dentro da tela */
+}
+
+/* Ajuste para o Carrinho no Celular (Mobile) */
+@media (max-width: 768px) {
+  .cart-sidebar {
+    width: 100% !important; /* Ocupa a tela inteira no celular */
+    right: -100% !important;
+  }
+  .cart-sidebar.active {
+    right: 0 !important;
+  }
+}
+/* ========================================================== */
+/* ESTILO MODERNO DO CARRINHO LATERAL ( PREMIUM )             */
+/* ========================================================== */
+
+/* Fundo do Carrinho (Fixo) */
+.cart-sidebar {
+  position: fixed !important;
+  top: 0;
+  right: -100% !important; /* Escondido */
+  width: 400px;
+  height: 100vh;
+  
+  /* Glassmorphism - Transparência elegante */
+  background: rgba(12, 13, 38, 0.96) !important;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  
+  /* Borda sutil dourada */
+  border-left: 1px solid rgba(242, 183, 5, 0.1);
+  
+  box-shadow: -15px 0 40px rgba(0, 0, 0, 0.7);
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  z-index: 10000 !important;
+  
+  display: flex !important;
+  flex-direction: column;
+  padding: 35px 30px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Quando aberto */
+.cart-sidebar.active {
+  right: 0 !important;
+}
+
+/* --------------------------------------------------------- */
+/* CABEÇALHO DO CARRINHO                                     */
+/* --------------------------------------------------------- */
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cart-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #f2f2f2;
+}
+
+.close-cart {
+    display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Efeito ao passar o mouse */
+.close-cart:hover {
+  color: #f2b705 !important; /* Acende no dourado da Jaguar Store */
+  transform: rotate(90deg) scale(1.1); /* Gira e dá um leve zoom */
+}
+/* --------------------------------------------------------- */
+/* ÁREA DOS ITENS (MEIO)                                     */
+/* --------------------------------------------------------- */
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Customizando a barra de rolagem (Scroll) */
+.cart-items::-webkit-scrollbar {
+  width: 5px;
+}
+.cart-items::-webkit-scrollbar-thumb {
+  background: rgba(242, 183, 5, 0.2);
+  border-radius: 10px;
+}
+
+.empty-cart-text {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 15px;
+  margin-top: 50px;
+  letter-spacing: 1px;
+}
+
+/* --------------------------------------------------------- */
+/* RODAPÉ DO CARRINHO (FUNDO)                                */
+/* --------------------------------------------------------- */
+.cart-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 25px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.total-price {
+  color: #f2b705;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Botão de Finalizar Compra */
+.checkout-btn {
+  width: 100%;
+  background: #f2b705;
+  color: #0c0d26;
+  border: none;
+  padding: 18px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-btn:hover {
+  background: #ffffff;
+  color: #0c0d26;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* --------------------------------------------------------- */
+/* AJUSTES MOBILE ( CELULAR )                                 */
+/* --------------------------------------------------------- */
+@media (max-width: 768px) {
+  .cart-sidebar {
+    width: 100% !important; /* Ocupa a tela cheia */
+    right: -100% !important;
+    padding: 30px;
+    border-left: none;
+  }
+  .cart-sidebar.active {
+    right: 0 !important;
+  }
+}
